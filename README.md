@@ -44,8 +44,8 @@
 
 ### Installation
 
-1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the project directory: `cd <project-directory>`
+1. Clone the repository: `git clone https://github.com/NourAshraf01/ffb-procure-web.git`
+2. Navigate to the project directory: `cd ffb-procure-web`
 
 ### Dependencies
 
