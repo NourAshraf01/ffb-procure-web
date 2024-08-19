@@ -1,0 +1,51 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+build/
+
+# IDE related
+.vscode/
+.idea/
+*.iml
+
+# Android related
+android/.gradle/
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/build/
+*.keystore
+
+# iOS related
+ios/Flutter/.symlinks/
+ios/Pods/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.podspec.lock
+ios/Flutter/Generated.xcconfig
+ios/Flutter/Flutter-Release.xcconfig
+ios/Flutter/Flutter-Debug.xcconfig
+
+# macOS related
+macos/Flutter/Flutter.framework
+macos/Flutter/Flutter.podspec
+
+# Linux related
+linux/Flutter/Flutter.framework
+linux/Flutter/Flutter.podspec
+
+# Web related
+web/assets/
+web/.dart_tool/
+
+# Other files and directories to ignore
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Generated files
+*.g.dart
