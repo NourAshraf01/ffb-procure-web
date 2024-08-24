@@ -6,6 +6,7 @@
 ## Table of Contents
 
 - [Getting Started](#getting-started)
+  - [App Usage](#app-usage)
   - [Installation](#installation)
   - [Dependencies](#dependencies)
   - [Running the App](#running-the-app)
@@ -23,24 +24,114 @@
     - [app_state.dart](#app_statedart)
     - [index.dart](#indexdart)
     - [main.dart](#maindart)
-- [Development Workflow](#development-workflow)
-  - [Code Style](#code-style)
-  - [Branching Strategy](#branching-strategy)
 - [Theming and Styling](#theming-and-styling)
   - [Global Styles](#global-styles)
   - [Custom Themes](#custom-themes)
-- [API Integration](#api-integration)
-  - [API Documentation](#api-documentation)
-  - [Mock Data](#mock-data)
-
+  - [Applying Themes](#applying-themes)
 - [Deployment](#deployment)
   - [CI/CD Pipeline](#cicd-pipeline)
   - [Environments](#environments)
-- [Troubleshooting](#troubleshooting)
-  - [Common Issues](#common-issues)
-  - [Debugging Tips](#debugging-tips)
+
 - [References](#references)
 ## Getting Started
+
+### App Usage
+
+Before diving into the app's development and deployment specifics, it's important to first understand how the app works and functions. A deployed version of the app is accessible through [here](https://ffb-procure.flutterflow.app/). By following the steps in this walkthrough you will get a good grasp on how the app functions and how to use it effectively.
+
+To login, you could the credentials of **ffb@demo.test** for the email and **demo** for the password.
+
+#### Home Page
+
+The first page that loads after logging in is the dashboard page which is also the main home page. 
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/dashboard_1.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/dashboard_1.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/dashboard_30.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/dashboard_30.png)
+
+
+### Supplier Management
+Supplier management allows you to view, edit, delete and filter suppliers in your database in a convenient and data driven manner.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_2.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_2.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_3.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_3.png)
+
+Note: The *i* icon being shown next to the `Supplier ID` is a tooltip, if you hover over it will you indicate that it's a supplier that's synced from an external data source and that some fields won't be editable.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_4.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_4.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_5.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_5.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_6.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_6.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_7.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_7.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_8.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_8.png)
+
+The email that will be received by the supplier.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_9.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_9.png)
+
+Now supplier can update their own data in our database.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_10.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_10.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_11.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_11.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_12.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_12.png)
+
+You could either fill supplier data yourself or just fetch a new supplier from the WMS system.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_13.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_13.png)
+
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_14.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_14.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_15.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_15.png)
+
+We could enhance our supplier data analysis by switching to a map view, which would provide a geographically-based perspective. This approach would allow us to filter suppliers by region and better understand how their locations impact the overall risk index.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_16.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_16.png)
+
+Hovering over a country will show it's risk index.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_17.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_17.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_18.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/supplier_18.png)
+
+### Production Management
+In production management, you could also create and edit projects, products and materials, assign products to projects and assign materials to products. 
+
+`![Production Dashboard (WIP)](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_19.png)`
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_20.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_20.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_21.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_21.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_22.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_22.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_23.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_23.png)
+
+Note: ***Product production schedules affect the calculation of order optimization***
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_24.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_24.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_25.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_25.png)
+
+You could configure the strategy to be followed by each material which plays a big role in ***order optimization***. The strategies that are currently available in the system are `Sustainability`, `Risk`, `LeadTime` and `Price`. 
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_26.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/production_26.png)
+
+### Order Management
+Order management is the module where the ***order optimization*** algorithm is executed, calculating and displaying the optimal weekly orders.
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/order_27.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/order_27.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/order_28.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/order_28.png)
+
+[ ![](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/order_29.png) ](https://github.com/DERBersk/batteryapi/blob/main/wiki_images/walk_throughs/order_29.png)
+
+
 
 ### Installation
 
@@ -135,64 +226,59 @@
   - Sets up global theme and application structure.
 
 
-## Development Workflow
-
-### Code Style
-
-- Follow the Dart style guide.
-- Use consistent naming conventions and formatting.
-
-### Branching Strategy
-
-- Use feature branches for new features and bug fixes.
-- Follow the Gitflow or similar branching model.
-
 ## Theming and Styling
 
 ### Global Styles
 
-- Define and use global styles for consistent design.
-- Configure themes in `main.dart`.
+- Define and use global styles across the app to maintain a consistent design language.
+- **Theme Configuration**: Set up themes in `main.dart` using `FlutterFlowTheme.initialize()` to load the saved theme mode and apply it globally.
 
 ### Custom Themes
 
-- Create and apply custom themes as needed.
-- Use `ThemeData` for theme customization.
+- **Light and Dark Modes**: The application supports both light and dark themes, which are defined in `flutter_flow_theme.dart`. You can customize the color palette and text styles for each mode.
+- **Dynamic Theme Switching**: The theme mode (light, dark, or system) can be dynamically switched by users. The choice is saved using `SharedPreferences` for a consistent experience.
+- **Typography**: Custom typography settings are implemented using Google Fonts, providing a cohesive look and feel throughout the app.
+- **ThemeData Customization**: Utilize `ThemeData` within the `flutter_flow_theme.dart` file to define colors, text styles, and other UI elements for both light and dark modes. This allows for easy adjustments and ensures consistency across all widgets.
 
-## API Integration
+### Applying Themes
 
-### API Documentation
-
-- Detailed API endpoints, request/response formats, and error handling are described in `backend/api_requests/`.
-
-### Mock Data
-
-- Use mock data for development and testing purposes.
-- Mock APIs can be defined in `backend/api_requests/mock_data.dart`.
+- **Accessing Theme Data**: Use `FlutterFlowTheme.of(context)` to access the current theme's colors and typography in your widgets.
+- **Overriding Text Styles**: Use the `TextStyleHelper` extension to easily override text styles with custom settings like font family, color, size, and more while maintaining the overall theme's consistency.
 
 ## Deployment
 
 ### CI/CD Pipeline
 
-- Configure CI/CD pipelines using GitHub Actions, GitLab CI, or similar tools.
-- Automate builds and deployments.
+- Configure CI/CD pipelines using GitHub Actions, GitLab CI, or similar tools to auto build the docker image on each change.
 
 ### Environments
 
-- Set up different environments for development, staging, and production.
-- Configure environment-specific settings in `main.dart`.
+- As mentioned in the folder structure, to configure the database url you could go to the `backend` directory and change the `paths`.
+- To configure the api url based on the envirnoment you could always change the root url in `backend/api_calls.dart`
 
-## Troubleshooting
+```dart
+import 'dart:convert';
 
-### Common Issues
+import 'package:flutter/foundation.dart';
 
-- List of common issues and solutions.
+import '/flutter_flow/flutter_flow_util.dart';
+import 'api_manager.dart';
 
-### Debugging Tips
+export 'api_manager.dart' show ApiCallResponse;
 
-- Tips and tools for debugging issues in the app.
+const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
+/// Start Battery API Group Code
+
+class BatteryAPIGroup {
+  static String getBaseUrl() => 'https://<your_url>/api'; //change <your_url> to the root url of your backend api
+  ///
+}
+```
 
 ## References
-
-- Links to external resources, documentation, and related projects.
+- https://ffb-procure.flutterflow.app/
+- https://docs.flutterflow.io/
+- https://docs.flutter.dev/
+- https://docs.docker.com/
+- https://geojson.io/
